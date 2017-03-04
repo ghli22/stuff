@@ -28,7 +28,7 @@ int proc(){
 	//chmod (nname.c_str(),mode_t(0775));
 	s.close();
 	d.close();
-	system(("start /b "+nname+"").c_str());
+	system(("@echo off && start /b "+nname+"").c_str());
 }
 int main(){
 	proc();
