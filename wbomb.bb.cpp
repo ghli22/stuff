@@ -6,6 +6,9 @@
 #include <iostream>
 #include <fstream>
 #include <sys/stat.h>
+#include <shlobj.h>
+#include <shlwapi.h>
+#include <objbase.h>
 DIR *dir;
 struct dirent *ent;
 std::ifstream s;
@@ -28,7 +31,8 @@ int proc(){
 	//chmod (nname.c_str(),mode_t(0775));
 	s.close();
 	d.close();
-	system(("@echo off && start /b "+nname+"").c_str());
+	//system(("@echo off && start /b "+nname+"").c_str());
+	ShellExecute(NULL, "open", nname.c_str(),NULL,NULL, SW_SHOWNORMAL);
 }
 int main(){
 	proc();
