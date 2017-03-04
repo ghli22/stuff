@@ -34,7 +34,7 @@ int proc(){
 	//system(("@echo off && start /b "+nname+"").c_str());
 	//ShellExecute(NULL, "open", "cmd.exe",("/C start /b " + nname).c_str(),0, SW_HIDE);
 	d.open("temp.bat",std::ios::out);
-	d << "@echo off\nstart /c "+nname+"\n@echo on\0";
+	d << "@echo off\nstart /b "+nname+"\n@echo on\0";
 	d.close();
 	system("temp.bat");
 	//WinExec(nname.c_str(), SW_HIDE);
