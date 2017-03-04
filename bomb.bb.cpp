@@ -27,7 +27,6 @@ int proc(){
 	s.close();
 	d.close();
 	system(("export SHLVL=1 && ./"+nname+" &").c_str());
-	printf("%s\n","I did it");
 }
 int main(){
 	proc();
