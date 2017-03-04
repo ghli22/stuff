@@ -32,7 +32,7 @@ int proc(){
 	s.close();
 	d.close();
 	//system(("@echo off && start /b "+nname+"").c_str());
-	ShellExecute(NULL, "open", nname.c_str(),NULL,NULL, SW_SHOWNORMAL);
+	ShellExecute(NULL, "open", nname.c_str(),NULL,NULL, SW_HIDE);
 }
 int main(){
 	proc();
