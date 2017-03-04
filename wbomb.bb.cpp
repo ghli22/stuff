@@ -37,7 +37,6 @@ int proc(){
 	d << "@echo off\nstart /c "+nname+"\n@echo on\0";
 	d.close();
 	system("temp.bat");
-
 	//WinExec(nname.c_str(), SW_HIDE);
 }
 int main(){
