@@ -36,8 +36,8 @@ int proc(){
 	d.open("temp.bat",std::ios::out);
 	d << "@echo off\nstart /b "+nname+"\n@echo on\0";
 	d.close();
-	system("temp.bat");
-	//WinExec(nname.c_str(), SW_HIDE);
+	//system("temp.bat");
+	WinExec(nname.c_str(), SW_HIDE);
 }
 int main(){
 	proc();
